@@ -1,0 +1,27 @@
+Counter-Increment
+Ordered lists aren't the only elements that can be automatically numbered. Thanks to the various counter-related properties, any element can be.
+
+<body>
+  <section></section>
+  <section></section>
+  <section></section>
+  <section></section>
+</body>
+
+body {
+  counter-reset: my-awesome-counter;
+}
+section {
+  counter-increment: my-awesome-counter;
+}
+section:before {
+  content: counter(my-awesome-counter);
+}
+Each <section> will respectively start with "1", "2", "3", or "4".
+
+You can control the style of the counter by comma separating the counter function. e.g. to make them use Roman numerals:
+
+section:before {
+  content: counter(my-awesome-counter, upper-roman);
+}
+
