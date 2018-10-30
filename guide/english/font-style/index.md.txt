@@ -1,0 +1,21 @@
+The font-style property allows you to make text appear italicized (i.e. sloped, or slanted).
+
+em {
+  font-style: italic;
+}
+This property accepts one of three possible values: normal, italic, and oblique.
+
+If a given font family has an italic or oblique face embedded, the browser will select that face. If no italic or oblique face is available, the browser will mimic the sloping effect. If italic is defined and there is no italic face available, the browser will look for an oblique face before it tries to mimic the italic. The same applies to oblique; it too will look first for an italic face.
+
+To prevent the browser from adding a mimicked, or synthesized, version of the italic or oblique face, you may use the font-synthesis property (if supported).
+
+Italic vs. Oblique
+According to the spec, "Italic forms are generally cursive in nature while oblique faces are typically sloped versions of the regular face." However, if the font being used does not have italic or oblique faces available, in most cases there is little, if any, difference between italic and oblique.
+p {
+  font-family: sans-serif;
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+.one { font-style: italic; }
+.two { font-style: oblique; }
