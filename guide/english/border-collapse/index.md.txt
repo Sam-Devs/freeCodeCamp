@@ -1,0 +1,34 @@
+Border Collapse
+The border-collapse property is for use on <table> elements (or elements made to behave like a table through display: table or display: inline-table). There are two values:
+
+separate (default) - in which all table cells have their own independent borders and there may be space between those cells as well.
+collapse - in which both the space and the borders between table cells collapse so there is only one border and no space between cells.
+
+table {
+  border-collapse: separate; /* Or do nothing, this is default */
+  border-spacing: 3px; /* Only works if border-collapse is separate */
+}
+
+table {
+  border-collapse: collapse;
+}
+
+align-items
+The align-items property is a sub-property of the Flexible Box Layout module.
+
+It defines the default behaviour for how flex items are laid out along the cross axis on the current line. You can think of it as the justify-content version for the cross-axis (perpendicular to the main-axis).
+
+The align-items property accepts 5 different values:
+
+flex-start: cross-start margin edge of the items is placed on the cross-start line
+flex-end: cross-end margin edge of the items is placed on the cross-end line
+center: items are centered in the cross-axis
+baseline: items are aligned such as their baselines align
+stretch (default): stretch to fill the container (still respect min-width/max-width)
+The following figure helps understand how flex items are layed out depending on the align-items value.
+Syntax:
+align-items: flex-start | flex-end | center | baseline | stretch
+
+.flex-container {
+  align-items: flex-start;
+}
